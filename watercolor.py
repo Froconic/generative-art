@@ -9,7 +9,7 @@ float_gen = lambda a, b: random.uniform(a, b)
 lavenderBlue = (205/255, 193/255, 255/255)
 slateBlue = (112/255, 128/255, 144/255)
 heliotropicGray = (115/255, 113/255, 252/255)
-seagreen = (0/255, 240/255, 181/255) 
+seagreen = (0/255, 240/255, 181/255)
 saddlebrown = (139/255, 69/255, 19/255)
 alleyorange = (255/255, 69/255, 0/255)
 
@@ -18,7 +18,7 @@ colors = [lavenderBlue, slateBlue, heliotropicGray, seagreen, saddlebrown, alley
 randColors = []
 for i in range(15):
     randColors.append((float_gen(.4,.8), float_gen(.4,.8), float_gen(.4,.8)))
-    
+
 def octagon(x_point, y_point, length):
   x = x_point
   y= y_point

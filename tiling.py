@@ -63,5 +63,5 @@ def tiling(x,y,steps,levels):
 
 def reset():
   resetscreen()
-  tiling(0,0,500,5)
+  tiling(0,500,5)
 
