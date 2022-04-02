@@ -14,7 +14,7 @@ from glyphs import glyph
 
 theme()
 bgpic("output.png")
-# tiling(0,0,500,6)
+tiling(0,0,500,6)
 # nestedSquares(10,40,100)
 color("#6667AB")
 # main()

@@ -9,45 +9,45 @@ import random
 # TODO create modules for each shape / technique
 
 
-def draw_square(length, angle):
+def square(length, angle):
     for i in range(4):
         forward(length)
         left(angle)
 
-def draw_circle(radius):
+def circle(radius):
     circle(radius)
 
-def draw_triangle(length):
+def triangle(length):
     for i in range(3):
         forward(length)
         left(120)
 
-def draw_pentagon(length):
+def pentagon(length):
   for i in range(5):
     fd(length)
     rt(72)
 
-def draw_hexagon(length):
+def hexagon(length):
   for i in range(6):
     fd(length)
     lt(60)
 
-def draw_heptagon(length):
+def heptagon(length):
   for i in range(7):
     fd(length)
     lt(51.42)
 
-def draw_octagon(length):
+def octagon(length):
   for i in range(8):
     fd(length)
     lt(45)
 
-def draw_nonagon(length):
+def nonagon(length):
   for i in range(9):
     fd(length)
     lt(40)
 
-def draw_decagon(length):
+def decagon(length):
   for i in range(10):
     fd(length)
     lt(36)
@@ -62,26 +62,10 @@ def seed_of_life(length):
     pendown()
     draw_circle(length)
 
-def draw_art(rounds, length, angle):
+def draw_art(rounds, length, angle, shape):
     for i in range(rounds):
-        draw_square(length, 90)
+        shape(length, 90)
         left(angle)
-
-def draw_art_2(rounds, length, angle):
-    for i in range(rounds):
-        draw_triangle(length)
-        left(angle)
-
-def draw_art_3(rounds, length, angle):
-    for i in range(rounds):
-        draw_circle(length)
-        left(angle)
-
-
-def draw_art_4(rounds, length, angle):
-    for i in range(rounds):
-        draw_star(length)
-        lt(angle)
 
 def tree(size,levels,angle):
   if levels == 0:
@@ -124,3 +108,4 @@ def eulers(length,angle_steps,steps):
     rt(angle)
     fd(length)
     angle += angle_steps
+
