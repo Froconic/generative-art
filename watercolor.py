@@ -1,10 +1,12 @@
 import cairo, sys, argparse, copy, math, random
+from shapes import *
 
 float_gen = lambda a, b: random.uniform(a, b)
 
 # todo Colors must be in 0 -1 range for RGB
 # todo Add colors by name with Copilot
 # todo play with variables in main function
+# todo
 
 lavenderBlue = (205/255, 193/255, 255/255)
 slateBlue = (112/255, 128/255, 144/255)

@@ -9,12 +9,12 @@ import random
 # TODO create modules for each shape / technique
 
 
-def square(length, angle):
+def square(length):
     for i in range(4):
         forward(length)
-        left(angle)
+        left(90)
 
-def circle(radius):
+def draw_circle(radius):
     circle(radius)
 
 def triangle(length):
@@ -64,7 +64,7 @@ def seed_of_life(length):
 
 def draw_art(rounds, length, angle, shape):
     for i in range(rounds):
-        shape(length, 90)
+        shape
         left(angle)
 
 def tree(size,levels,angle):
@@ -102,10 +102,47 @@ def draw_star(length):
     rt(144)
 
 def eulers(length,angle_steps,steps):
+  # Works best with lengths below 20 and angles below 10
   angle = 0
   
   for i in range(steps):
     rt(angle)
     fd(length)
     angle += angle_steps
+
+def draw_flower(length, angle, steps):
+  for i in range(steps):
+    rt(angle)
+    fd(length)
+    lt(angle)
+    fd(length)
+    lt(angle)
+    
+def draw_spiral(length, angle, steps):
+  for i in range(steps):
+    rt(angle)
+    fd(length)
+    lt(angle)
+    fd(length)
+    lt(angle)
+
+# todo add x and y as well as x offset and y offset to function
+# todo add fills to the functions
+def layered_shape(length, shape, steps):
+  y = length / steps
+  for i in range(steps):
+    shape(length)
+    penup()
+    print(y)
+    goto(0,y)
+    pendown()
+    length *= .9
+    y += steps
+
+
+def spiralReduction(shape,length,angle,steps, increment):
+  for i in range(steps):
+    shape(length)
+    rt(angle)
+    length -= increment
 

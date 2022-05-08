@@ -5,6 +5,7 @@ import random
 # TOdo add function to change branch colors
 # TODO add function to change branch thickness
 # Todo add function to change xstarting point
+# TODO Fix tree recursion
 
 theme()
 
@@ -29,13 +30,3 @@ def tree(length, decrease, angle, noise = 0):
     lt(leftAngle)
     
     bk(length)
-    
-tracer(True)
-penup()
-goto(0,-400)
-pendown()
-lt(90)
-tree(200, 0.888, 30)
-
-tracer(True)
-exitonclick()
